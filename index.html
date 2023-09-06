@@ -3,46 +3,358 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="x-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial scale =" 1.0">
-    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-        crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftTalk</title>
+    <link rel="stylesheet" href="swift.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+        .samuel {
+            background-color: rgb(222, 222, 222);
+            padding-top: 30px;
+            padding-bottom: 80px;
+        }
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-        crossorigin="anonymous"></script>
+        .drop-item:hover {
+            color: gold;
+        }
+
+        .fo {
+            background: white;
+            color: red;
+            width: 120px;
+            height: 40px;
+            border-radius: 5px;
+            border: 2px solid red;
+            font-size: 20px;
+        }
+
+        .fo:hover {
+            background: red;
+            color: white;
+        }
+
+        .vt:hover {
+            color: red;
+        }
+
+        .vt {
+            text-align: center;
+        }
+
+        .way {
+            margin: auto;
+        }
+
+        li {
+            text-align: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            .footer {
+                display: flex;
+                flex-direction: column;
+                padding-left: 20px;
+            }
+
+            .bar {
+                display: block;
+                font-size: 30px;
+            }
+
+            form {
+                margin-left: 20px;
+            }
+
+            .follow {
+                max-width: 100%;
+                min-width: 100%;
+            }
+
+            .brand {
+                display: block;
+
+            }
+
+            .text {
+                font-size: 20px;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .contact {
+                max-width: 100%;
+                min-width: 100%;
+            }
+
+            .sd {
+                background-color: rgb(249, 249, 249);
+                margin-left: 0px;
+                padding: 40px;
+                padding-top: 0px;
+                padding-right: 0px;
+            }
+
+            .last {
+                margin-bottom: 0px;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .bar {
+                display: none;
+            }
+
+            .fa-brands {
+                display: block;
+            }
+
+        }
+
+        .re {
+            position: sticky;
+            top: 0px;
+        }
+
+        .pin {
+            padding-left: 90px;
+        }
+
+        #bg-top {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('http://swifttalk.net/wp-content/uploads/2019/02/interconnectivity.jpg');
+        }
+    </style>
 </head>
 
 <body>
-    <script>
-         for(i=1; i<20; i++){
-        if(i%2==1){
-         continue;
-        }
-        console.log(i);
+    <nav class="navbar navbar-expand-lg lof re">
+        <img src="sd.png">
+        <div class="container">
+            <div>
+                <a class="navbar-toggler fr" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </a>
+            </div>
+            <div>
+            </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body ju">
+                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3" style="text-align: center;">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active vt" style="color: rgb(225, 5, 5);" data-bs-toggle="dropdown"
+                                href="swift.html">Swift <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu"
+                                style="background-color: red; width: 300px; height: 200px; color: gold; line-height: 50px;">
+                                <li><a class="dropdown-item" href="#">Internet</a></li>
+                                <li><a class="dropdown-item" href="#">Inter-Branch</a></li>
+                                <li><a class="dropdown-item" href="#">Microwave Internet</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link vt" href="dropbox.html">dropbox</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link vt" href=".html"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link vt" href="whatsapp.html">Whatsapp</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link vt" href="meta_open_source.html">meta_open_source</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link vt" href="zoom.html">zoom</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link vt" href="Neco.html">Neco</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link vt" href="valuemax.html">Valuemax</a>
+                        </li>
+                    </ul>
+                    <div>
+                        <button class="fo">Login <i class="fa-regular fa-user"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="p-5" id="bg-top" class="text">
+        <h3 class="pin"> Inter-Branch Connectivity <i class=" fa-solid fa-sharp fa-regular fa-minus"></i> WAN links And
+            Leased
+            Lines</h3>
+    </div>
+    <p style="font-size: 18px; font-family: Arial, Helvetica, sans-serif;"> <b> We provides WAN links and dedicated
+            Lease Circuits linking up branches of our clients to the HQ, or amongst themselves.
+            These Inter-Branch connectivity solutions are based on 3 primary technologies; </b></p>
+    <div>
+        <h5>Fibre / Wireless WAN Services</h5>
+        <p>
+            We provide Fibre and Radio Lastmle WAN solutions with various types and levels of redundancy depending on
+            client needs; the general service solution
+            is based on the following components as below
+        </p>
+        <p class="qwe">
+            <i class="fa-solid fa-angle-right"></i>Multiple Fibre Internet Source. The primary internet source is the
+            from MainOne Fibre cable backed up by Dolphin
+            (ACE) fibre link – both landed at Lagos, Victoria Island. <br> <br>
+            <i class="fa-solid fa-angle-right"></i> Fibre Local / National Loop & WAN Over 80 locations nationwde. The
+            local loop within Lagos and to most locations in Nigeria is provided via the over 34,000 km of fibre rings
+            round Nigeria. The fibre to these locations are provided via multiple routes and separate fibre cable owners
+            to provide redundancy and ensure that there is automatic failover in cause of failure of one route. <br>
+            <br>
+            <i class="fa-solid fa-angle-right"></i>Radio / Fibre Last mile. A Microwave point to point or point to
+            multipoint radio CPE will be utilised to link from the fibre termination point our local NOC to the client’s
+            office. Generally, a telecoms mast of appropriate height is needed for this radio installation. In
+            circumstance and locations where metro fibre exists or can be provided, then fibre can be used as last mile
+            to the client’s premises. <br> <br>
+            <i class="fa-solid fa-angle-right"></i>Optional Backup Radio / Fibre Last mile. As an additional reliability
+            option, a secondary fibre link from another POP and backhaul source can be added to the above. <br> <br>
+            <i class="fa-solid fa-angle-right"></i>Optional Redundant Onsite 3G/LTE APN Backup. A 3G/LTE based equipment
+            and service is located at the client’s office and cab is used to provide another optional level of
+            redundancy . The 3G/LTE service is described in section below.
+            Automatic Failover Router. A router configured for automatic failover between the 2 x Fibre Internet and or
+            3G APN backup above can be installed at the clients location(s) to automatically failover to the redundant
+            link in the case of the primary fibre/radio internet link failure.
+        </p>
+    </div>
+    <div>
+        <h5>Dual 3G / LTE Private APN Links</h5>
+        <p>
+            We also provides 3G/4G mobile services based Internet and WAN solutions with dual GSM provider redundancy.
+            This service can be used as backup to fibre based WAN or Internet services, and is also used to provide
+            primary link services to ATM, Kiosks, Gaming centers, small office branches, individual locations depending
+            on client needs; the general service solution is based on the following components as below
+        </p>
+        <p class="qwe">
+            <i class="fa-solid fa-angle-right"></i>Dual SIM 3G / 4G APN links, with Auto failover running on two
+            separate telecoms providers with nationwide coverage. <br>
+            Available virtually everywhere nationwide, where there is at a least a minimum of 2G service from any of our
+            three partner Telcos Etisalat, MTN, and Airtel,
+            . <br> <br>
+            <i class="fa-solid fa-angle-right"></i>Good Availability due to dual SIM/ provider configuration – Subject
+            to GSM service quality.
+            Supports Mobile ATM Trucks / Kiosks, and works even with truck in motion
+            . <br> <br>
+            <i class="fa-solid fa-angle-right"></i>May require additional outdoor antenna, at very low GSM network
+            coverage locations.
+            Can also be used for Cash Centres / small branches or Backup to high priority branch fibre links at a
+            different cost profile .
+        </p>
+    </div>
+    <div>
+        <h5>Satellite and BGAN WAN links</h5>
+        <p>A Microwave point to point or point to multipoint radio CPE will be utilised to link from the fibre
+            termination point our local NOC to the clients office. Generally, a telecoms mast of appropriate height is
+            needed for this radio installation. In circumstance and locations where metro fibre exists or can be
+            provided, then fibre can be used as last mile to the client’s premises</p>
+    </div>
+    <div>
+        <h5>Automatic Failover Service and Router</h5>
+        <p>An router configured for automatic failover between the optional 2 or more links as above t can be installed
+            at the clients location(s) to automatically failover to the redundant link in the case of the primary
+            fibre/radio internet link failure.</p>
+    </div>
+    <div class="sam">
+        <div class="container">
+            <div class="row">
+                <div class="col sm-4 contact">
+                    <h3>Contact Information </h3><br>
+                    <b> Head Office: </b> 3-6 Alhaji Adejumo Avenue, Ilupeju Industrial Estate Ilupeju, Lagos. <br>
+                    <b> Branches:</b> <br>
+                    <b> Port Harcourt:</b> 42 Old Aba Road, Rumuomasi, PH <br>
+                    <b>Warri:</b> 27 Kosini Street, Off Ogunu Road, Warri. <br>
+                    <b>Abuja:</b> The Valley Mall, 2nd Floor, 215, Ademola Adetokunbo Crescent, Wuse 2, Abuja <br>
+                    <b>Email:</b> info@swifttalk.com <br>
+                    <b>Phone:</b> 234 (0)1 7734765
+                </div>
+                <div class="col sm-4 follow">
+                    <h3>Follow us on</h3>
+                    <div class="brand">
+                        <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col sm-4">
+                    <h2>Join Our Newsletter</h2>
+                    <form name="myForm" onSubmit="return(validate())">
+                        <label>Email*</label> <br>
+                        <input type="email" name="Email"><span class="em" style="color: red;"></span><br>
+                        <label>First Name</label> <br>
+                        <input type="text" name="txt"><span class="talk" style="color: red;"></span> <br>
+                        <label>Last Name</label> <br>
+                        <input type="text" name="las"><span class="tall" style="color: red;"></span>
+                        <span class="po" style="color: green; font-size: 20px;"></span> <br> <br>
+                        <button style="border-radius: 30px;" onclick="return(validate())" class="click">Join
+                            Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mom">
+        © SwiftTalk Nigeria <b> 2023.</b> All rights reserved.
+    </div>
+    <div>
+        <p style="color: red; text-align: center;">CAVEAT: THIS IS STUDENT PROJECT SOLELY FOR LEARNING AND PRACTICE
+            PURPOSE, AND NOT AN ATTEMPT TO CLONE THE EXISTING PAGE</p>
+    </div>
 
-    }
-       // let kay =pronpt('enter any even number from');
-        //for(let i=0; i<kay.length; i++){
-          //  if(kay%2==0){
-            //alert(`correct,${kay} is an even number`)
-            
-     //   }//
-   // }//
-      </script>
+
+    <script>
+        function validate() {
+            let names = /^[a-zA-Z]+$/
+            let myemail = /^\w+@[a-z]+\.[a-z]{2,3}$/;
+
+            if (!document.myForm.Email.value.match(myemail)) {
+                document.querySelector(`.em`).innerHTML = `Invalid Email`;
+                document.myForm.focus();
+                return false;
+            }
+
+            if (!document.myForm.txt.value.match(names)) {
+                document.querySelector(`.talk`).innerHTML = `Invaild  Name`;
+                document.myForm.focus();
+                return false;
+            }
+
+            if (!document.myForm.las.value.match(names)) {
+                document.querySelector(`.tall`).innerHTML = `Invalid  Name`;
+                document.myForm.focus();
+                return false;
+            }
+
+            else {
+                document.querySelector(`.tall`).style.display = `valid name`;
+                document.querySelector(`.talk`).style.display = `valid name`;
+                document.querySelector(`.em`).style.display = `valid Email`;
+                return true;
+            }
+
+
+        }
+    </script>
 </body>
 
 </html>
